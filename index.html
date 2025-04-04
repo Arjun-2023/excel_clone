@@ -1,0 +1,97 @@
+<DOCTYPE html>
+    <html lang ="en">
+        <head>
+            <meta charset = "UTF-8">
+            <meta http-equiv = "X-UA-Compatible" content = "IE=edge">
+            <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+            <title>Excel_clone</title>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+            integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+            crossorigin="anonymous" />
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+            <link rel=" stylesheet" href = "/excelclonestyle/excelclone.css">
+    
+        </head>
+
+        <body>
+            <div class = "menu-bar">
+            <!--select-->
+                <div class = "formatting_block">
+                    <div class = "grouping_block">
+                        <!--different fonts for use-->
+                        <div class="font_types_block">
+                            <select id ="font_types" >
+                                <option value="Arial">Arial</option>
+                                <option value="Cambria">Cambria</option>
+                                <option value="Georgia">Georgia</option>
+                                <option value = "sans-serif">Sans-serif</option>
+                            </select>
+                        </div> 
+                        <!--font view..bolt italic and underlines-->
+                        <div class = "style_type_block">
+                            <input id = "bold" type="button" value="B">
+                            <input id = "underline" type="button" value="U">
+                            <input id = "italic" type="button" value="I">
+                            
+                        </div> 
+                    </div>
+                    
+                    <div class="grouping_block">
+                        <!--font size -->
+                        <div class = "font_size_block">
+                            <select id ="font_size">
+                                <option value="14">12</option>
+                                <option value="18">16</option>
+                                <option value="22">20</option>
+                                <option value="26">24</option>
+                            </select>
+                        </div>
+                        
+                        <div class = "color_block">
+                            <input id="color1" type="color" value="#FFFFFF">
+                            <input id="color2" type="color" value="#000000">
+                        </div>   
+
+                    </div>
+                </div>
+                <div class="alignment">
+                    <input id="left" type="button" halign="left" value="L">
+                    <input id="center" type="button" halign="center" value="C">
+                    <input id="right" type="button" halign="right" value="R">
+                </div>
+            </div>
+            
+            
+            
+            <div class="formula-bar">
+                <input type="text" id="location" disabled class = "location">
+                <div class="formula-break">:</div>
+                <input type="text" id = "formula" class="formula">
+            </div>
+
+            <div class = "gridBlockforspreadheet" id="spreadsheet"></div>
+                       <!--row and col and saving data -->
+ <!--           <div class = "grid_container">
+                <div class = "top-left-cell"></div>
+                <div class="top-row" ></div>
+                <div class = "left-col-cell"></div>       -->
+                <!--2d grid build-->             
+  <!--             <div class = "grid"></div>        -->  
+
+            
+    <div class="sheets">
+        <div class="add-sheet">
+            <i class="fas fa-plus"></i>
+        </div>
+        <div class="sheets-list">
+            <div class="sheet active-sheet" sheetid="0">Sheet 1</div>
+        </div>
+    </div>
+
+            <script src="/excelclonejs/excelcloneCreatingrowcol.js" defer></script>
+           
+           <script src="/excelclonejs/exclecloneFormula.js" defer></script>
+           <script src="/excelclonejs/exelcloneFormulasfunctionsUtils.js" defer></script>
+        </body>
+    </html>
